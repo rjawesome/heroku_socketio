@@ -12,5 +12,6 @@ def index():
 @socketio.on("message")
 def handleMessage(data):
     emit("new_message",data,broadcast=True)
-
-socketio.run(app, debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5004)))
+    
+if __name__ == "__main__":
+    socketio.run(app, debug=True, host='0.0.0.0', 5004)
