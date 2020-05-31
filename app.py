@@ -13,4 +13,4 @@ def index():
 def handleMessage(data):
     emit("new_message",data,broadcast=True)
 
-socketio.run(app, debug=True, port=5004)
+socketio.run(app, debug=True, port=int(os.environ.get('PORT', 5004)))
